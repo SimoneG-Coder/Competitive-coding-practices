@@ -6,7 +6,8 @@ DSA Patterns:
 -Prefix/Suffix Sum (Arrays)
 -Modified Binary Search (Arrays)
 -Fast And Slow Pointers (Linked List)
--Monotonic (Stack/Queue)
+-Monotonic (Stack/Queue) :- Increasing
+                         :- Dereasing
 -Greedy (All Data Structures)
 -BFS/ DFS (Trees and Graphs)
 -Dijkstra’s Algorithm (Graphs)
