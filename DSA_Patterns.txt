@@ -1,0 +1,15 @@
+DSA Patterns:
+
+-2 Pointers (Arrays/Strings)
+-Sliding Window (Arrays/Strings)
+-Kandane's Maximum SubArray (Arrays)
+-Prefix/Suffix Sum (Arrays)
+-Modified Binary Search (Arrays)
+-Fast And Slow Pointers (Linked List)
+-Monotonic (Stack/Queue)
+-Greedy (All Data Structures)
+-BFS/ DFS (Trees and Graphs)
+-Dijkstra’s Algorithm (Graphs)
+-Bellman–Ford Algorithm (Graph)
+-Dynamic Programming (Alternative to Recursion) -: Memorisation (Top Down Approach)
+                                                -: Tabulation (Bottom Up Approach)
