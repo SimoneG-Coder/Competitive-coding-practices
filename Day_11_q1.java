@@ -16,7 +16,7 @@ public class NextGreaterElement {
             }
             stack.push(num);
         }
-
+//method getorDefault and do other hash map methods too
         // For remaining elements in stack, no greater element exists
         while (!stack.isEmpty()) {
             nextGreaterMap.put(stack.pop(), -1);
