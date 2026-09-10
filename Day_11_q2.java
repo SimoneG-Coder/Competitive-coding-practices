@@ -1,6 +1,6 @@
 //Min Stack
-//Time complexity of stack function
-
+//Time complexity of stack functions
+//Top of monotinic decreasing stacks will be minimum value and top od monotonic increasing stack will always be max
 class MinStack {
 public:
     MinStack() {
