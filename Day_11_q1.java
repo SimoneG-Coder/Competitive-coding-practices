@@ -1,5 +1,5 @@
 //Next Greater Element 1
-//Monotonic Stack
+//Monotonic Stack -: increasing and decreasing stack
 
 import java.util.*;
 
