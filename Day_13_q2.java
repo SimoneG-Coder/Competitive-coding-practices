@@ -56,7 +56,7 @@ class Solution {
     }
 }
 
-//BackTracking Soluton (Not Optimal)
+//BackTracking Soluton (Not Optimal) as backtracking explores all possike paths
 class Solution {
     private int count = 0;
 
