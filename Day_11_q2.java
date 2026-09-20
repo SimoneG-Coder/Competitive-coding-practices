@@ -1,36 +1,39 @@
 //Min Stack
 //Time complexity of stack functions
 //Top of monotinic decreasing stacks will be minimum value and top od monotonic increasing stack will always be max
+import java.util.Stack;
+
 class MinStack {
-public:
-    MinStack() {
-        // Constructor initializes empty stacks
+
+    private Stack<Integer> st;
+    private Stack<Integer> minSt;
+
+    public MinStack() {
+        st = new Stack<>();
+        minSt = new Stack<>();
     }
-    
-    void push(int val) {
+
+    public void push(int val) {
         st.push(val);
+
         // Push the minimum so far into minSt
-        if (minSt.empty() || val < minSt.top()) {
+        if (minSt.empty() || val < minSt.peek()) {
             minSt.push(val);
         } else {
-            minSt.push(minSt.top());
+            minSt.push(minSt.peek());
         }
     }
-    
-    void pop() {
+
+    public void pop() {
         st.pop();
         minSt.pop();
     }
-    
-    int top() {
-        return st.top();
-    }
-    
-    int getMin() {
-        return minSt.top();
+
+    public int top() {
+        return st.peek();
     }
 
-private:
-    stack<int> st;     // Main stack
-    stack<int> minSt;  // Stack to track minimums
-};
+    public int getMin() {
+        return minSt.peek();
+    }
+}
