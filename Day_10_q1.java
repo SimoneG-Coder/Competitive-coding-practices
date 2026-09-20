@@ -16,38 +16,8 @@ class ListNode {
 }
 
 public class Solution {
-    public boolean hasCycle(ListNode head) {
+    public boolean detectAndRemoveCycle(ListNode head) {
         if (head == null) return false;
-
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while (fast != null && fast.next != null) {
-            slow = slow.next;           // move 1 step
-            fast = fast.next.next;      // move 2 steps
-
-            if (slow == fast) {
-                return true;            // cycle detected
-            }
-        }
-
-        return false; // reached end → no cycle
-    }
-}
-
-//Detect Sart of the loop 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
-
-public class Solution {
-    public ListNode detectCycle(ListNode head) {
-        if (head == null) return null;
 
         ListNode slow = head;
         ListNode fast = head;
@@ -66,13 +36,19 @@ public class Solution {
                     ptr1 = ptr1.next;
                     ptr2 = ptr2.next;
                 }
-                return ptr1; // start of loop
+
+                // Step 3: Remove cycle
+                ListNode start = ptr1;
+                ListNode ptr = start;
+                while (ptr.next != start) {
+                    ptr = ptr.next;
+                }
+                ptr.next = null; // break the cycle
+
+                return true; // cycle was detected and removed
             }
         }
 
-        return null; // no cycle
+        return false; // no cycle
     }
 }
-
-
-
